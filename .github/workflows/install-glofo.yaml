@@ -22,8 +22,8 @@ jobs:
     - name: pdk & openlane
       run: make setup
 
-    - name: uncompress gds
-      run: make uncompress
+    - name: remove old gds
+      run: rm gds/*
 
     - name: clock GDS
       run: make wrapped_vga_clock
