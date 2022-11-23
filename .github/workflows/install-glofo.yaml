@@ -15,6 +15,8 @@ jobs:
 
     # checkout the repo to get the scripts
     - uses: actions/checkout@v2
+      with:
+        submodules: recursive
 
     # build the user project and wrapper
     - name: pdk & openlane
