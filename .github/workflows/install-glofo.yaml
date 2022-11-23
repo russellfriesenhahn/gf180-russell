@@ -50,10 +50,10 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
           name: Wrapper GDS
-          path: /home/runner/gf180-vga-clock/gds/user_project_wrapper.gds
+          path: /home/runner/work/gf180-vga-clock/gf180-vga-clock/gds/user_project_wrapper.gds
 
     - name: Archive Wrapper Signoff
       uses: actions/upload-artifact@v2
       with:
           name: Wrapper Report
-          path: /home/runner/gf180-vga-clock/openlane/user_project_wrapper/runs/user_project_wrapper/reports/final_summary_report.csv
+          path: /home/runner/work/gf180-vga-clock/gf180-vga-clock/openlane/user_project_wrapper/runs/user_project_wrapper/reports/metrics.csv
