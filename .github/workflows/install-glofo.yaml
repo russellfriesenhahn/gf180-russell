@@ -20,16 +20,16 @@ jobs:
 
     # build the user project and wrapper
     - name: pdk & openlane
-      run: |
-        make setup
+      run: make setup
+
+    - name: uncompress gds
+      run: make uncompress
 
     - name: clock GDS
-      run: |
-        make wrapped_vga_clock
+      run: make wrapped_vga_clock
 
     - name: user project wrapper GDS
-      run: |
-        make user_project_wrapper
+      run: make user_project_wrapper
 
 #    - name: simulation
 #      run: |
@@ -40,6 +40,10 @@ jobs:
         make precheck
         make run-precheck
 
+    - name: list gds
+      run: |
+        ls gds
+        find openlane/user_project_wrapper/runs/user_project_wrapper/reports
 
     # archive the gds and final report for the user project wrapper
     - name: Archive Wrapper GDS
