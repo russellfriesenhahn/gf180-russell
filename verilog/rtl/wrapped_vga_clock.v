@@ -21,11 +21,11 @@ module wrapped_vga_clock(
     // permanently set oeb so that outputs are always enabled: 0 is output, 1 is high-impedance
     assign io_oeb = {`MPRJ_IO_PADS{1'b0}};
 
-    wire reset = ! wb_rst_i;
+    wire reset_n = ! wb_rst_i;
 
     vga_clock vga_clock(
         .clk(wb_clk_i),
-        .reset_n(reset),
+        .reset_n(reset_n),
         .adj_hrs(io_in[8]),
         .adj_min(io_in[9]),
         .adj_sec(io_in[10]),
