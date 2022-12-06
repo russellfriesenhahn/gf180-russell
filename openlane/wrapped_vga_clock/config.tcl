@@ -8,6 +8,8 @@ set ::env(STD_CELL_LIBRARY) "gf180mcu_fd_sc_mcu7t5v0"
 
 # add your source files here
 set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/../../verilog/rtl/wrapped_vga_clock.v \
+    $::env(DESIGN_DIR)/../../verilog/rtl/vga-clock/rtl/spi1.v \
+    $::env(DESIGN_DIR)/../../verilog/rtl/vga-clock/rtl/cmdProc.v \
     $::env(DESIGN_DIR)/../../verilog/rtl/vga-clock/rtl/button_pulse.v \
     $::env(DESIGN_DIR)/../../verilog/rtl/vga-clock/rtl/digit.v \
     $::env(DESIGN_DIR)/../../verilog/rtl/vga-clock/rtl/fontROM.v \
@@ -17,10 +19,10 @@ set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/../../verilog/rtl/wrapped_vga_clock
 
 
 # set absolute size of the die to 300 x 300 um
-set ::env(DIE_AREA) "0 0 300 300"
+set ::env(DIE_AREA) "0 0 400 400"
 set ::env(FP_SIZING) absolute
 
-set ::env(FP_CORE_UTIL) 40
+set ::env(FP_CORE_UTIL) 45
 set ::env(PL_TARGET_DENSITY) [ expr ($::env(FP_CORE_UTIL)+5) / 100.0 ]
 
 # define number of IO pads

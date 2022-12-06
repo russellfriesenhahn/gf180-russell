@@ -29,6 +29,10 @@ module wrapped_vga_clock(
         .adj_hrs(io_in[8]),
         .adj_min(io_in[9]),
         .adj_sec(io_in[10]),
+        .SPI_clk(io_in[19]),
+        .SPI_csb(io_in[20]),
+        .SPI_copi(io_in[21]),
+        .SPI_cipo(io_out[22]),
         .hsync(io_out[11]),
         .vsync(io_out[12]),
         .rrggbb(io_out[18:13])
